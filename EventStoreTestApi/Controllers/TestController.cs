@@ -29,7 +29,7 @@ namespace EventStoreTestApi.Controllers
             {
                 await Global.EsConnection.AppendToStreamAsync(
                     $"Test.CardCharge-{chargeId}",
-                    ExpectedVersion.NoStream, requestedEvent,
+                    ExpectedVersion.Any, requestedEvent,
                     authorisedEvent);
             }
         }

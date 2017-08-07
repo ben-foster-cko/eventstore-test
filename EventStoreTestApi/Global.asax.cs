@@ -32,7 +32,6 @@ namespace EventStoreTestApi
         private static IEventStoreConnection ConnectToEventStore()
         {
             var settings = ConnectionSettings.Create()
-                .KeepReconnecting()
                 .UseCustomLogger(new SerilogEventStoreLogger(Logger));
 
             var connection =
